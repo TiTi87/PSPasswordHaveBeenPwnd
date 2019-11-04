@@ -1,3 +1,3 @@
 #requires -module pester
 
-Invoke-Pester './Test-IsThisPasswordHaveBeenPwnd.ps1'
+Invoke-Pester -OutputFile "./Result-Pester.XML" -OutputFormat NUnitXML './Test-IsThisPasswordHaveBeenPwnd.ps1'
