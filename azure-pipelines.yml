@@ -8,6 +8,5 @@ pool:
 
 steps:
   - powershell: Install-Module Pester -Scope CurrentUser -Force
-  - powershell:  Get-ChildItem
   - powershell: '.\Test-withPester.ps1'
 
