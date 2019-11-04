@@ -8,6 +8,7 @@ pool:
 
 steps:
   - powershell: Install-Module Pester -Scope CurrentUser -Force
+    displayName: "Install Pester"
   - powershell: '.\Test-withPester.ps1'
     displayName: "Run Pester"
   - task: PublishTestResults@2
