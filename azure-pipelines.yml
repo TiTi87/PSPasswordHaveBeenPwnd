@@ -1,0 +1,14 @@
+# docs @ https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: "vs2017-win2016"
+
+install:
+  - powershell: Install-Module Pester -Scope CurrentUser -Force
+
+steps:
+  - powershell: .\Test-withPester.ps1
+
