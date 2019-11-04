@@ -6,9 +6,7 @@ trigger:
 pool:
   vmImage: "vs2017-win2016"
 
-install:
-  - powershell: Install-Module Pester -Scope CurrentUser -Force
-
 steps:
+  - powershell: Install-Module Pester -Scope CurrentUser -Force
   - powershell: .\Test-withPester.ps1
 
