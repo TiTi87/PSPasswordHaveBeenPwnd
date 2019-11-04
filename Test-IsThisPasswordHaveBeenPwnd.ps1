@@ -81,7 +81,7 @@ Describe "Test-IsThisPasswordHaveBeenPwnd" {
     }
     it "find that the password have not been powned" {
         $ret = Test-IsThisPasswordHaveBeenPwnd -Password "Correct Horse Battery Staple"
-        Assert-MockCalled Get-StringHash -Scope It -Time 1
+        Assert-MockCalled Invoke-RestMethod -Scope It -Time 1
         $ret | should be $false
     }
   }
