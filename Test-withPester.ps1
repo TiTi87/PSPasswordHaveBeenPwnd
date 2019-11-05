@@ -1,3 +1,4 @@
 #requires -module pester
 
-Invoke-Pester -OutputFile "./Result-Pester.XML" -OutputFormat NUnitXML -CodeCoverage './Test-IsThisPasswordHaveBeenPwnd.ps1'
+$testFile = './Test-IsThisPasswordHaveBeenPwnd.ps1'
+Invoke-Pester -CodeCoverage $testFile -OutputFile "./Result-Pester.XML" -OutputFormat NUnitXML $testFile
