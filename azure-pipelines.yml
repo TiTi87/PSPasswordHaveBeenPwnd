@@ -6,6 +6,13 @@ trigger:
 pr:
 - master
 
+schedules:
+- cron: "6 6 * * *"
+  displayName: Daily test
+  branches:
+    include:
+    - master
+
 pool:
   vmImage: "vs2017-win2016"
 
